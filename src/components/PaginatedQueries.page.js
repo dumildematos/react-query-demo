@@ -9,7 +9,7 @@ const fetchColors = (pageNumber) => {
 export const PaginatedQueriesPage = () => {
 
     const [pageNumber,setPageNumber] = useState(1)
-const { isLoading , data , isError , error , isFetching } = useQuery(
+    const { isLoading , data , isError , error , isFetching } = useQuery(
     ['colors', pageNumber], 
     () => fetchColors(pageNumber), 
     {

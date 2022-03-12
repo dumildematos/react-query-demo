@@ -11,6 +11,7 @@ import { ParallelQueriesPage } from './components/ParallelQueries.page'
 import { DynamicParallelPage  } from './components/DynamicParallel.page'
 import { DependentQueriesPage } from './components/DependentQueries.page'
 import { PaginatedQueriesPage } from './components/PaginatedQueries.page'
+import { InfiniteQueriesPage } from './components/InfiniteQueries.page'
 const queryClient = new QueryClient();
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
           </ul>
         </nav>
         <Routes>
+          <Route exact path='/rq-infinite' element={<InfiniteQueriesPage/>} />
           <Route exact path='/rq-paginated' element={<PaginatedQueriesPage/>} />
           <Route exact path='/rq-dependent' element={<DependentQueriesPage email='john.doe@mailinator.com' />} />
           <Route exact path='/rq-dynamic-parallel' element={<DynamicParallelPage heroIds={[1,3]} />} />
