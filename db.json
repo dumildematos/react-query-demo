@@ -19,6 +19,16 @@
       "name": "The Flash",
       "alterEgo": "Barry Allen",
       "id": 4
+    },
+    {
+      "name": "Catwoman1",
+      "alterEgo": "Celina Kyle1",
+      "id": 5
+    },
+    {
+      "name": "Catwoman13",
+      "alterEgo": "3Celina Kyle1",
+      "id": 6
     }
   ],
   "friends": [
