@@ -28,6 +28,10 @@ export const RQSuperHeroesPage = () => {
       // enabled: false, disabe react query 
       onSuccess,
       onError,
+      select: (data) => {
+        const superHerosName = data.data.map(hero => hero.name)
+        return superHerosName;
+      }
 
     }
   )
@@ -46,11 +50,17 @@ export const RQSuperHeroesPage = () => {
     <>
     <button onClick={refetch}>Fetch Heros</button>
     <h2>RQ Super Heros Page</h2>
-      {
+      {/* {
         data?.data.map(hero => {
           return <div key={hero.id}> {hero.name} </div>
         })
-      }
+      } */}
+
+     { 
+      data.map(heroName => {
+        return <div key={heroName}> {heroName} </div>
+      })
+     }
     </>
   )
 }
