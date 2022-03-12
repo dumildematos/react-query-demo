@@ -29,5 +29,17 @@
             "id": 3,
             "name": "Rachel Green"
         }
+    ],
+    "users": [
+        {
+            "id": "john.doe@mailinator.com",
+            "channelId": "johndoe"
+        }
+    ],
+    "channels": [
+        {
+            "id": "johndoe",
+            "courses": ["react", "vue", "angular"]
+        }
     ]
 }
