@@ -14,6 +14,11 @@
       "id": 3,
       "name": "Wonder Woman 1",
       "alterEgo": "Princess Diana"
+    },
+    {
+      "name": "The Flash",
+      "alterEgo": "Barry Allen",
+      "id": 4
     }
   ],
   "friends": [
