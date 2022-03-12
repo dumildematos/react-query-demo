@@ -15,6 +15,8 @@ export const RQSuperHeroesPage = () => {
       // staleTime: 30000, 0 is defult value
       // refetchOnMount: true, default value (true)
       // refetchOnWindowFocus: true default value (true)
+      // refetchInterval: 2000, false is the default value
+      // refetchIntervalInBackground: true,  false is the default value
     }
   )
 
