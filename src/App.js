@@ -6,7 +6,7 @@ import './App.css'
 import { HomePage } from './components/Home.page'
 import { RQSuperHeroesPage } from './components/RQSuperHeroes.page'
 import { SuperHeroesPage } from './components/SuperHeroes.page'
-
+import { RQSuperHeroPage } from './components/RQSuperHero.page' 
 const queryClient = new QueryClient();
 
 function App() {
@@ -23,13 +23,14 @@ function App() {
               <Link to='/super-heroes'>Traditional Super Heroes</Link>
             </li>
             <li>
-              <Link to='/rq-super-heroes'>RQ Super Heroes</Link>
+              <Link to='/rq-super-heros'>RQ Super Heroes</Link>
             </li>
           </ul>
         </nav>
         <Routes>
           <Route exact path='/super-heroes' element={<SuperHeroesPage />} />
-          <Route exact path='/rq-super-heroes' element={<RQSuperHeroesPage />} />
+          <Route exact path='/rq-super-heros' element={<RQSuperHeroesPage />} />
+          <Route exact path="/rq-super-heros/:heroId" element={<RQSuperHeroPage />} />
           <Route exact path='/' element={ <HomePage />} />
         </Routes>
       </div>

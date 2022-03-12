@@ -19,10 +19,10 @@ export const useSuperHerosData = (onSuccess, onError) => {
           // enabled: false, disabe react query 
           onSuccess,
           onError,
-          select: (data) => {
-            const superHerosName = data.data.map(hero => hero.name)
-            return superHerosName;
-          }
+          // select: (data) => {
+          //   const superHerosName = data.data.map(hero => hero.name)
+          //   return superHerosName;
+          // }
     
         }
       )
