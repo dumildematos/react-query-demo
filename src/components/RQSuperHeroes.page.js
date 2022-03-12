@@ -1,9 +1,5 @@
-import { useQuery } from 'react-query'
-import axios from 'axios'
+import {useSuperHerosData} from '../hooks/useSuperHerosData'
 
-const fetchSuperHeros = () => {
-  return axios.get('http://localhost:4000/superheros')
-}
 
 export const RQSuperHeroesPage = () => {
 
@@ -15,26 +11,7 @@ export const RQSuperHeroesPage = () => {
     console.log("Perform side effect after encountering error.", error)
   }
 
-  const { isLoading , data , isError, error , isFetching , refetch} = useQuery(
-    'super-heros', 
-    fetchSuperHeros,
-    {
-      // cacheTime: 5000, (5min is the default value)
-      // staleTime: 30000, 0 is defult value
-      // refetchOnMount: true, default value (true)
-      // refetchOnWindowFocus: true default value (true)
-      // refetchInterval: 2000, false is the default value
-      // refetchIntervalInBackground: true,  false is the default value
-      // enabled: false, disabe react query 
-      onSuccess,
-      onError,
-      select: (data) => {
-        const superHerosName = data.data.map(hero => hero.name)
-        return superHerosName;
-      }
-
-    }
-  )
+  const { isLoading , data , isError, error , isFetching , refetch} = useSuperHerosData(onSuccess, onError)
 
   console.log({ isLoading, isFetching })
 
